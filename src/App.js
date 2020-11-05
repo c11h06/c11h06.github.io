@@ -1,12 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { Contact } from './pages/Contact';
+import { Portfolio } from './pages/Portfolio';
+import { Layout } from './components/Layout';
+import { NavigationBar } from './components/NavBar';
+import { Jumbotron } from './components/Jumbotron';
 
-function App() {
-  return (
-    <div className="App">
-      <p>please work</p>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <NavigationBar />
+        <Jumbotron />
+        <Layout>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path='/portfolio' component={Portfolio} />
+              <Route path='/contact' component={Contact} />
+              <Redirect to='/' />
+            </Switch>
+          </Router>
+        </Layout>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
