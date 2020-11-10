@@ -32,10 +32,10 @@ export const Contact = () => {
             <div className='col-8 form-group mx-auto'>
               <textarea className='form-control' id='' cols='30' rows='8' placeholder='Your message' name='message'></textarea>
             </div><br></br>
-            <div classname='col-8 pt-3 mx-auto'>
-              <input type='submit' className='btn btn-info' value='Send Message'></input>
-            </div>
           </div>
+        <div classname='col-8 pt-3 mx-auto'>
+          <input type='submit' className='btn btn-info' value='Send Message'></input>
+        </div>
         </form>
       </div>
     </div>
