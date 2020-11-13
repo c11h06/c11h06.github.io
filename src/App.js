@@ -14,11 +14,10 @@ class App extends Component {
       <Jumbotron />
       <Layout>
         <Switch>
-          <Route exact path='/#/portfolio' component={Portfolio} />
-          <Route exact path='/#/contact' component={Contact} />
+          <Route exact path='/portfolio' component={Portfolio} />
+          <Route exact path='/contact' component={Contact} />
           <Route exact path='/' component={Home} />
         </Switch>
-        <Redirect to='/' />
       </Layout>
     </div>
     );
